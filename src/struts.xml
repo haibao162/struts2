@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.1//EN"
+    "http://struts.apache.org/dtds/struts-2.1.dtd">
+<!--http://localhost:8080/projectname/namespace/actionname.action  -->
+<struts>
+<constant name="struts.devMode" value="true"/>
+<package name="day01" namespace="/" extends="struts-default">
+<action name="hello" class="action.HelloAction" method="execute">
+<!--  <result name="success">
+/hello.jsp
+</result>-->
+ <result name="success">
+/hello.jsp
+</result> 
+
+</action>
+<action name="hello2" class="action.HelloAction2" method="execute">
+
+<result>/hello2.jsp</result>
+ </action>
+ 
+</package>
+<package name="day02" namespace="/path"  extends="struts-default">
+<action name="path" class="action.HelloAction3">
+<result name="success">
+ /jsp/path.jsp</result>
+ </action>
+ </package>
+</struts>
